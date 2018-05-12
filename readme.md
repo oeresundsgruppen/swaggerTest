@@ -2,6 +2,11 @@
 
 Using SpringFox Swagger.
 
+Logging is set to Trace, to show:
+
+- Found resource handler mapping: URL pattern="/swagger-ui.html"
+- Mapped URL path [/v2/api-docs] onto method
+
 Tiny springboot 2.0 spring-mvc example with single JSP.
 
 <B>http://localhost:8080/swaggerTest/webAPI gives:</B>
