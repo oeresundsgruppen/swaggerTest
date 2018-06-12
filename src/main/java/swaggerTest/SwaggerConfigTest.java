@@ -1,14 +1,11 @@
 package swaggerTest;
 
-import javax.servlet.ServletContext;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -17,6 +14,8 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import javax.servlet.ServletContext;
+
 @Configuration
 @EnableSwagger2
 @EnableSpringDataWebSupport
@@ -24,13 +23,13 @@ public class SwaggerConfigTest extends WebMvcConfigurerAdapter
 {
 	@Autowired
 	private ServletContext servletContext_;
-	
+
     @Bean
     public Docket api()
     {
         return new Docket(DocumentationType.SWAGGER_2)
         		/*
-        		.pathProvider(new RelativePathProvider(servletContext_) 
+        		.pathProvider(new RelativePathProvider(servletContext_)
         		{
         			@Override
         			public String getApplicationBasePath()

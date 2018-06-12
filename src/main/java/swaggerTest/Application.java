@@ -1,7 +1,7 @@
 package swaggerTest;
 
-import javax.servlet.ServletContext;
-
+import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
@@ -12,10 +12,9 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-
-import ch.qos.logback.classic.Level;
-import ch.qos.logback.classic.Logger;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+import javax.servlet.ServletContext;
 
 @SpringBootApplication
 @EnableCaching

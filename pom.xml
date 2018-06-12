@@ -16,8 +16,6 @@
   <packaging>war</packaging>
   
   <build>
-    <sourceDirectory>src</sourceDirectory>
-    <testSourceDirectory>src/test</testSourceDirectory>
     <finalName>swaggerTest</finalName>
     
     <plugins>
