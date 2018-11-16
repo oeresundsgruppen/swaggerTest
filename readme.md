@@ -1,4 +1,11 @@
-<B>SwaggerTest example to show the useal unable to infer base url bug, which is reported by several developers.</B>
+<B>SwaggerTest example to show the useal unable to infer base url bug, which is reported by several developers. Now its working in tomcat.</B>
+
+<B>dispatcher-servlet is configured for tomcat and end-points are working</B>
+
+http://localhost:8080/swaggerTest/swagger-ui.html
+http://localhost:8080/swaggerTest/v2/api-docs
+
+Deployed to Tomcat8/9.
 
 To run the sample
 
