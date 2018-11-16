@@ -7,11 +7,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-@EnableWebMvc
+//@EnableWebMvc
 @Configuration
-@EnableWebSecurity
+//@EnableWebSecurity
 @Import(SwaggerConfigTest.class)
-public class webSecurityTest extends WebSecurityConfigurerAdapter
+public class webSecurityTest // extends WebSecurityConfigurerAdapter
 {
 	private static final String[] AUTH_WHITELIST = {
 			"/swagger-resources/**",
@@ -32,11 +32,10 @@ public class webSecurityTest extends WebSecurityConfigurerAdapter
 	}
 	*/
 	
-	@Override
-	protected void configure(HttpSecurity http) throws Exception 
-	{
-    	http.authorizeRequests()
-		.antMatchers(AUTH_WHITELIST).permitAll();
-		//.antMatchers("/**/*").denyAll();
-	}
+	//protected void configure(HttpSecurity http) throws Exception 
+	//{
+    //	http.authorizeRequests()
+	//	.antMatchers(AUTH_WHITELIST).permitAll();
+	//	//.antMatchers("/**/*").denyAll();
+	//}
 }

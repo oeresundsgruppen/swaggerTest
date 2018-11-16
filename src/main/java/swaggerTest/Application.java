@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -17,10 +18,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import javax.servlet.ServletContext;
 
 @SpringBootApplication
+@EnableAutoConfiguration
 @EnableCaching
-@ComponentScan // (basePackages= {"webTest","common"})
+@ComponentScan (basePackages= {"swaggerTest"})
 @Component
-@EnableSwagger2
 public class Application extends SpringBootServletInitializer
 {
 	private static ServletContext context_;
@@ -43,12 +44,12 @@ public class Application extends SpringBootServletInitializer
 	{
 		// Set log-levels
 		final Logger context = (Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
-		context.setLevel(Level.TRACE);
+		context.setLevel(Level.INFO);
 
 		// Create the 'root' Spring application context
 		final AnnotationConfigWebApplicationContext springRootContext = new AnnotationConfigWebApplicationContext();
 		springRootContext.setServletContext(servletcontext);
-		springRootContext.setDisplayName("webTest");
+		springRootContext.setDisplayName("swaggerTest");
 		springRootContext.close();
 	}
 
