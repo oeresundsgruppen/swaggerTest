@@ -38,7 +38,7 @@ public class SwaggerConfigTest // extends WebMvcConfigurerAdapter
     @Bean
     public Docket api()
     {
-		System.out.println("docket created for endpoing [" + swagger2Endpoint + "]");
+	System.out.println("docket created for end-point [" + swagger2Endpoint + "]");
         return new Docket(DocumentationType.SWAGGER_2)
         		.apiInfo(apiInfo())
            		.pathMapping(swagger2Endpoint)
@@ -60,7 +60,7 @@ public class SwaggerConfigTest // extends WebMvcConfigurerAdapter
     @Bean
     public DispatcherServlet dispatcherServlet()
     {
-		System.out.println("dispatcherServlet started");
+	System.out.println("dispatcherServlet started");
     	return new DispatcherServlet();
     }	
     
@@ -68,13 +68,11 @@ public class SwaggerConfigTest // extends WebMvcConfigurerAdapter
     //public void addResourceHandlers(ResourceHandlerRegistry registry) 
     //{
     //    String basePath = servletContext_.getContextPath();
-
-	//	registry
+    //	  registry
     //		.addResourceHandler("/swagger-ui.html")
     //   	.addResourceLocations("classpath:/META-INF/resources/");
-		
-    //   	registry
-    //   		.addResourceHandler("/webjars/**")
-    //   		.addResourceLocations("classpath:/META-INF/resources/webjars/");
+    //    registry
+    //   	.addResourceHandler("/webjars/**")
+    //   	.addResourceLocations("classpath:/META-INF/resources/webjars/");
     //}
 }
